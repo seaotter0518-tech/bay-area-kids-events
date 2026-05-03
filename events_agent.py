@@ -32,18 +32,24 @@ def search_events() -> list[dict]:
     week_str = today_pst.strftime("%B %Y")
 
     queries = [
+        # 活動カテゴリ別
         f"Bay Area toddler dance music class 3 year old {week_str}",
         f"Bay Area kids swimming pool lesson toddler {week_str}",
         f"Bay Area festival fair family kids outdoor {week_str}",
         f"Bay Area children art craft class toddler {week_str}",
         f"Bay Area kids gardening nature outdoor program {week_str}",
         f"Bay Area public library story time toddler {week_str}",
+        # エリア別
         f"Silicon Valley toddler educational activities {week_str}",
         f"San Francisco Oakland Palo Alto kids events toddler {week_str}",
-        "Children's Discovery Museum San Jose events",
-        "Exploratorium San Francisco kids family events",
-        "Bay Area kids museum family activities toddler",
         f"Santa Clara Sunnyvale Cupertino kids events {week_str}",
+        # 定番スポット
+        "Children's Discovery Museum San Jose upcoming events",
+        "Exploratorium San Francisco kids family events",
+        # SNS・イベントサイト経由
+        f"site:eventbrite.com Bay Area toddler kids events {week_str}",
+        f"site:meetup.com Bay Area toddler family kids {week_str}",
+        f"site:facebook.com/events Bay Area kids toddler dance art music {week_str}",
     ]
 
     results = []
