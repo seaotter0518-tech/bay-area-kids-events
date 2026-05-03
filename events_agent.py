@@ -12,7 +12,7 @@ from datetime import datetime, timezone, timedelta
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
-from duckduckgo_search import DDGS
+from ddgs import DDGS
 import anthropic
 
 logging.basicConfig(
